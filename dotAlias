@@ -1,0 +1,10 @@
+alias ls="ls --color"
+
+alias gst="git status"
+alias gadd="git add"
+alias gcommit="git commit"
+alias gpush="git push"
+alias gpull="git pull"
+
+alias subl="sublime"
+alias b="bundle exec"
