@@ -1,4 +1,10 @@
-alias ls="ls --color"
+lias edita="vi ~/.alias"
+alias refresh=". ~/.alias"
+
+alias ls='ls'
+alias l='ls'
+alias ll='ls -al'
+alias lh='ls -Alh'
 
 alias gst="git status"
 alias gadd="git add"
@@ -7,4 +13,9 @@ alias gpush="git push"
 alias gpull="git pull"
 
 alias subl="sublime"
-alias b="bundle exec"
+alias b="bundle"
+alias rk="rake"
+alias migrate="rake db:migrate db:rollback && rake db:migrate"
+
+# Include custom aliases
+[[ -f ~/.alias.local ]] && source ~/.alias.local
