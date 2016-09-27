@@ -1,0 +1,41 @@
+# Projects
+alias projects="cd ~/projects/"
+alias pmt_old="cd ~/projects/deenero_bill_me_later/api"
+alias installments="cd ~/projects/pagantis/installments"
+alias do_backoffice="cd ~/projects/pagantis/do-backoffice"
+alias psp="cd ~/projects/pagantis/psp"
+alias veo="cd ~/projects/pagantis/veo"
+alias cre_demo="cd ~/projects/pagantis/demo_cre_connectors"
+alias conn_proxy="ssh -A aws@128.199.49.117"
+
+#rails app
+alias do_backoffice_rs='DB_PASSWORD=root rs'
+alias do_backoffice_rc='DB_PASSWORD=root rc'
+
+# Connections
+alias conn_staging="ssh apps@1.front.staging.pagantis.com"
+alias conn_prod_1="ssh apps@1.front.psp.prod.pagantis.com"
+alias conn_prod_2="ssh apps@2.front.psp.prod.pagantis.com"
+alias conn_prod_1_sudo="ssh ec2-user@54.154.249.173"
+alias conn_prod_2_sudo="ssh ec2-user@52.17.37.14"
+alias conn_psp-staging="ssh -A apps@psp-staging.pagantis.com"
+alias conn_cre_integracion="ssh apps@integracion.pagamastarde.com"
+alias conn_billme_later="ssh ubuntu@1.front.prod.pagamastarde.com"
+alias conn_adminbo_stg="ssh bo@1.bo.stg.deenero.com"
+
+
+# Deploys
+alias deploy_staging="bundle exec cap staging deploy:migrations"
+alias deploy_production="bundle exec cap production deploy:migrations"
+alias restart_unicorn_staging="bundle exec cap staging unicorn:restart"
+
+# Others
+alias knocking="telnet 128.199.49.117 666;telnet 128.199.49.117 3615"
+alias ipscan="sudo arp-scan -l"
+
+#dockers
+alias doc-lm="docker-compose run pmt-lm"
+alias rspec_pmt-lm="docker-compose run -e RAILS_ENV=test pmt-lm bundle exec rspec "
+
+alias vpn="cd /etc/openvpn && sudo openvpn --config o01-udp-3194-paraujo.ovpn"
+alias stop_mysql="sudo service mysql stop"

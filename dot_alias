@@ -1,0 +1,28 @@
+alias edita="vi ~/.alias"
+alias refresh=". ~/.alias"
+
+alias ls='ls'
+alias l='ls'
+alias ll='ls -al'
+alias lh='ls -Alh'
+
+alias gst="git status"
+alias gadd="git add"
+alias gcommit="git commit"
+alias gpush="git push"
+alias gpull="git pull"
+
+alias subl="sublime"
+alias b="bundle"
+alias rk="b exec rake"
+alias rc="b exec rails c"
+alias rs="b exec rails s"
+alias migrate="rk db:migrate db:rollback && rk db:migrate"
+alias rspec_test="b exec rspec spec"
+
+alias madrid="curl -4 http://wttr.in/madrid"
+alias barcelona="curl -4 http://wttr.in/barcelona"
+alias moon="curl -4 http://wttr.in/moon"
+
+# Include custom aliases
+[[ -f ~/.alias.local ]] && source ~/.alias.local

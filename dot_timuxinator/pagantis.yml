@@ -1,0 +1,53 @@
+# ~/.tmuxinator/pagantis.yml
+
+name: pagantis
+root: ~/projects/
+
+# Optional tmux socket
+# socket_name: foo
+
+# Runs before everything. Use it to start daemons etc.
+# pre: sudo /etc/rc.d/mysqld start
+
+# Runs in each window and pane before window/pane specific commands. Useful for setting up interpreter versions.
+# pre_window: rbenv shell 2.0.0-p247
+
+# Pass command line options to tmux. Useful for specifying a different tmux.conf.
+# tmux_options: -f ~/.tmux.mac.conf
+
+# Change the command to call tmux.  This can be used by derivatives/wrappers like byobu.
+# tmux_command: byobu
+
+# Specifies (by name or index) which window will be selected on project startup. If not set, the first window is used.
+# startup_window: logs
+
+windows:
+  - local-pmt:
+      layout: main-horizontal
+      panes:
+        - cd ~/projects/pmt-dockerize/pmt-lm 
+        - cd ~/projects/pmt-dockerize/pmt-lm
+  - local-pg-api:
+      layout: main-horizontal
+      panes:
+        - cd ~/projects/pagantis/pg-api
+        - cd ~/projects/pagantis/pg-api
+  - local-bo-backoffice:
+      layout: main-horizontal
+      panes:
+        - cd ~/projects/pagantis/bo-backoffice
+        - cd ~/projects/pagantis/bo-backoffice
+  - local-cre-demo: 
+        - cd ~/projects/pagantis/demo_cre_connectors
+        - nodejs app.js
+  - staging-pmt: 
+      layout: main-horizontal
+      panes:
+        - #blank
+        - logs:
+          - conn_staging
+          - tail -f apps/pmt/shared/log/staging.log | grep -v delayed_jobs
+        - console:
+          - conn_staging
+          - cd apps/pmt/current
+          - bundle exec rails c staging 
