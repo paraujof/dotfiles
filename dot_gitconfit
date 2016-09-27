@@ -1,0 +1,10 @@
+[user]
+	name = Pablo Araujo
+	email = paraujo@digitalorigin.com
+[alias]
+	co = checkout
+        br = branch
+        ci = commit
+        st = status
+[diff]
+	external = meld
