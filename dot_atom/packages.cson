@@ -1,0 +1,16 @@
+packages: [
+  "atom-pair"
+  "atom-panda-syntax"
+  "data-atom"
+  "git-log"
+  "highlight-selected"
+  "language-haml"
+  "language-rspec"
+  "linter"
+  "linter-rubocop"
+  "package-sync"
+  "preview-plus"
+  "project-manager"
+  "rails-snippets"
+  "rspec"
+]
