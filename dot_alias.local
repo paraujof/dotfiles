@@ -7,6 +7,7 @@ alias psp="cd ~/projects/pagantis/psp"
 alias veo="cd ~/projects/pagantis/veo"
 alias cre_demo="cd ~/projects/pagantis/demo_cre_connectors"
 alias conn_proxy="ssh -A aws@128.199.49.117"
+alias conn_proxy_tesst="ssh -A aws@128.199.49.117"
 
 #rails app
 alias do_backoffice_rs='DB_PASSWORD=root rs'
